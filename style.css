@@ -3,7 +3,7 @@
 
 .container{
 display: grid;
-background-color: blue;
+background-color:cyan;
 place-items: center;
 height: 600px;
 
@@ -18,7 +18,7 @@ display: grid;
 .logos img{
     height: 90px;
     width: 70px;
-border-radius: 20px;
+border-radius: 0px;
 
 place-items: center;
 padding: 10px;

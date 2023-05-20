@@ -1,6 +1,21 @@
 img{
-    width: 8%;
+    width: 10%;
 }
 .hide{
     filter: brightness(0.0);
+}
+.show{
+    filter: brightness(1.0);
+}
+
+.container{
+display: grid;
+background-color: rgba(0, 0, 255, 0.787);
+align-items: center;
+
+}
+.cards{
+    display: grid;
+    grid-template-columns:4,1fr ;
+ 
 }

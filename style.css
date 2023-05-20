@@ -1,0 +1,6 @@
+img{
+    width: 8%;
+}
+.hide{
+    filter: brightness(0.0);
+}

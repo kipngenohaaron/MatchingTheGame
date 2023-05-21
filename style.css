@@ -46,11 +46,11 @@
   }
   
   .card.clicked {
-    background-color: orange;
+    background-color: goldenrod;
   }
   
   .card.checked {
-    background-color: rgb(10, 238, 10);
+    background-color: rgb(6, 246, 6);
   }
   
   .card.clicked img,

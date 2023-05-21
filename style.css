@@ -20,14 +20,14 @@
   .cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2em;
+    grid-gap: 3em;
   }
   
   .card {
     height: 110px;
     width: 90px;
-    background-color: #ffff00;
-    border-radius: 10px;
+    background-color: blue;
+    border-radius: 8px;
     display: grid;
     place-items: center;
     cursor: pointer;
@@ -35,7 +35,7 @@
   }
   
   .card:hover {
-    transform: scale(1.03);
+    transform: scale(1.25);
   }
   
   .card img {
@@ -50,7 +50,7 @@
   }
   
   .card.checked {
-    background-color: lightgreen;
+    background-color: rgb(10, 238, 10);
   }
   
   .card.clicked img,
@@ -59,7 +59,7 @@
   }
   
   .card.shake {
-    background-color: #f15f5f;
+    background-color: red;
     animation: shake 0.5s;
   }
   

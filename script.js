@@ -1,6 +1,7 @@
 let counter = 0;
 let firstSelection = "";
 let secondSelection = "";
+let isAnimating = false;
 
 const cards = document.querySelectorAll(".cards .card");
 cards.forEach((card) => {

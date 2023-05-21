@@ -7,6 +7,16 @@ let move = 0;
 const movesDisplay = document.querySelector("#moves-counter");
 const cardsContainer = document.querySelector(".cards");
 const cards = document.querySelectorAll(".cards .card");
+// Function to update the moves counter display
+function updateMovesDisplay() {
+  movesDisplay.textContent = move;
+}
+
+// Shuffle the cards on page load
+window.addEventListener("DOMContentLoaded", () => {
+  shuffleCards();
+  updateMovesDisplay();
+});
 cards.forEach((card) => {
 
 

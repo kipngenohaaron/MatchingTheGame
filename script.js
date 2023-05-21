@@ -1,13 +1,18 @@
 let counter = 0;
-let firstSelection = "";
-let secondSelection = "";
+let firstSelection = null;
+let secondSelection = null;
 let isAnimating = false;
+let move = 0;
 
+const movesDisplay = document.querySelector("#moves-counter");
+const cardsContainer = document.querySelector(".cards");
 const cards = document.querySelectorAll(".cards .card");
 cards.forEach((card) => {
+
+
   card.addEventListener("click", () => {
     card.classList.add("clicked");
-
+   
     if (counter === 0) {
       firstSelection = card.getAttribute("fruit");
       counter++;

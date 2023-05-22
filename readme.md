@@ -25,7 +25,8 @@
 
 ### sketch
 
-![tile matching game](https://github.com/kipngenohaaron/MatchingTheGame/assets/132748186/8bc04da9-9afe-44fc-88b4-4ae63c5a2cc8)
+![tile matching game](https://github.com/kipngenohaaron/MatchingTheGame/assets/132748186/4e024b91-f064-4115-8f06-6493162ceaee)
+
 
 ## Contact Info.
 ### For more information you can reach out; Email: kipngenohaaron@gmail.com

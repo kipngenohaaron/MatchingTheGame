@@ -11,7 +11,12 @@ const cards = document.querySelectorAll(".cards .card");
 function updateMovesDisplay() {
   movesDisplay.textContent = move;
 }
-
+(function shuffle() {
+    cards.forEach(card => {
+      let randomPos = Math.floor(Math.random() *12);
+      card.style.order = randomPos;
+    });
+  })();
 // Shuffle the cards on page load
 // window.addEventListener("DOMContentLoaded", () => {
 //   shuffleCards();
@@ -70,9 +75,17 @@ cards.forEach((card) => {
     }
   });
 });
-(function shuffle() {
-    cards.forEach(card => {
-      let randomPos = Math.floor(Math.random() *12);
-      card.style.order = randomPos;
-    });
-  })();
+function match(cardOne , cardTwo){
+    if(cardOne.dataset.index == cardTwo.dataset.index){
+        score.innerHTML = parseInt(score.innerHTML) + 1
+        cardOne.classList.remove('flip')
+        cardTwo.classList.remove('flip')
+        cardOne.classList.add('match')
+        cardTwo.classList.add('match')
+    }else{
+        setTimeout(() => {
+            cardOne.classList.remove('flip')
+            cardTwo.classList.remove('flip')
+        }, 1000);
+    }
+}

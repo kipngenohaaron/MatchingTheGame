@@ -24,8 +24,8 @@
   }
   
   .card {
-    height: 110px;
-    width: 90px;
+    height: 120px;
+    width: 115px;
     background-color: blue;
     border-radius: 8px;
     display: grid;

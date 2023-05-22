@@ -1,16 +1,16 @@
-
 let counter = 0;
 let firstSelection = null;
 let secondSelection = null;
-let isAnimating = false;
 let move = 0;
 let score = 0;
+let timer = null;
 
 const scoreDisplay = document.querySelector("#score-counter");
 const movesDisplay = document.querySelector("#moves-counter");
 const cardsContainer = document.querySelector(".cards");
 const cards = document.querySelectorAll(".cards .card");
 const restartButton = document.querySelector("#restart-button");
+const timerDisplay = document.querySelector("#timer");
 
 function updateScoreDisplay() {
   scoreDisplay.textContent = score;
@@ -33,6 +33,18 @@ function shuffleCards() {
   });
 }
 
+function startTimer() {
+  let seconds = 0;
+  timer = setInterval(() => {
+    seconds++;
+    timerDisplay.textContent = `Timer: ${seconds}s`;
+  }, 1000);
+}
+
+function stopTimer() {
+  clearInterval(timer);
+}
+
 function restartGame() {
   move = 0;
   score = 0;
@@ -40,6 +52,8 @@ function restartGame() {
   updateScoreDisplay();
   resetCards();
   shuffleCards();
+  timerDisplay.textContent = "Timer: 0s";
+  stopTimer();
 }
 
 (function shuffle() {
@@ -62,7 +76,7 @@ cards.forEach((card) => {
 
       if (firstSelection === secondSelection) {
         const correctCards = document.querySelectorAll(
-          ".card[fruit='" + firstSelection + "']"
+          `.card[fruit="${firstSelection}"]`
         );
 
         correctCards[0].classList.add("checked");
@@ -92,3 +106,6 @@ cards.forEach((card) => {
 });
 
 restartButton.addEventListener("click", restartGame);
+
+// Start the timer when the game begins
+startTimer();

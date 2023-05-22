@@ -17,11 +17,21 @@
   font-weight: 500;
 }
 
+
 .cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 3em;
 }
+#restart-button { 
+border-color: red;
+color: black;
+border-radius: 5px;
+height: 30px;
+width: 80px;
+
+}
+
 
 .card {
   height: 120px;

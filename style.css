@@ -60,7 +60,7 @@
   
   .card.shake {
     background-color: red;
-    animation: shake 0.5s;
+    animation: shake 0.8s;
   }
   
   /*@keyframes shake {

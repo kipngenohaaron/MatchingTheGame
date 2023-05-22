@@ -13,10 +13,24 @@ function updateMovesDisplay() {
 }
 
 // Shuffle the cards on page load
-window.addEventListener("DOMContentLoaded", () => {
-  shuffleCards();
-  updateMovesDisplay();
-});
+// window.addEventListener("DOMContentLoaded", () => {
+//   shuffleCards();
+//   updateMovesDisplay();
+// });
+function match(cardOne , cardTwo){
+    if(cardOne.dataset.index == cardTwo.dataset.index){
+        score.innerHTML = parseInt(score.innerHTML) + 1
+        cardOne.classList.remove('flip')
+        cardTwo.classList.remove('flip')
+        cardOne.classList.add('match')
+        cardTwo.classList.add('match')
+    }else{
+        setTimeout(() => {
+            cardOne.classList.remove('flip')
+            cardTwo.classList.remove('flip')
+        }, 1000);
+    }
+}
 cards.forEach((card) => {
 
 
@@ -39,7 +53,8 @@ cards.forEach((card) => {
         correctCards[0].classList.remove("clicked");
         correctCards[1].classList.add("checked");
         correctCards[1].classList.remove("clicked");
-      } else {
+      } 
+      else {
         const incorrectCards = document.querySelectorAll(".card.clicked");
 
         incorrectCards[0].classList.add("shake");
@@ -55,3 +70,9 @@ cards.forEach((card) => {
     }
   });
 });
+(function shuffle() {
+    cards.forEach(card => {
+      let randomPos = Math.floor(Math.random() *12);
+      card.style.order = randomPos;
+    });
+  })();

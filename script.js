@@ -1,3 +1,4 @@
+
 let counter = 0;
 let firstSelection = null;
 let secondSelection = null;
@@ -9,6 +10,7 @@ const scoreDisplay = document.querySelector("#score-counter");
 const movesDisplay = document.querySelector("#moves-counter");
 const cardsContainer = document.querySelector(".cards");
 const cards = document.querySelectorAll(".cards .card");
+const restartButton = document.querySelector("#restart-button");
 
 function updateScoreDisplay() {
   scoreDisplay.textContent = score;
@@ -16,6 +18,28 @@ function updateScoreDisplay() {
 
 function updateMovesDisplay() {
   movesDisplay.textContent = move;
+}
+
+function resetCards() {
+  cards.forEach((card) => {
+    card.classList.remove("clicked", "checked", "shake", "match");
+  });
+}
+
+function shuffleCards() {
+  cards.forEach((card) => {
+    let randomPos = Math.floor(Math.random() * 12);
+    card.style.order = randomPos;
+  });
+}
+
+function restartGame() {
+  move = 0;
+  score = 0;
+  updateMovesDisplay();
+  updateScoreDisplay();
+  resetCards();
+  shuffleCards();
 }
 
 (function shuffle() {
@@ -67,4 +91,4 @@ cards.forEach((card) => {
   });
 });
 
-  
+restartButton.addEventListener("click", restartGame);

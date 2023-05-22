@@ -10,7 +10,7 @@
 
 #### You need to have vs-code, git installed in your machine
 
-1. git clone https://gi
+1. git clone https://kipngenohaaron.github.io/MatchingTheGame/
 2. git add .
 3. git commit -m "first commit"
 4. git push origin master
@@ -29,7 +29,7 @@
 ### For more information you can reach out; Email: kipngenohaaron@gmail.com
 #### 0724279400 / 0724828197
 ## LInk to live 
-https://
+https://kipngenohaaron.github.io/MatchingTheGame/
 ## License
 MIT License
 Copyright 2023 Kipngenoh Aaron Rotich

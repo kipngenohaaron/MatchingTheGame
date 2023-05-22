@@ -4,8 +4,16 @@ let secondSelection = null;
 let isAnimating = false;
 let move = 0;
 
+
+const score = document.querySelector('.score span');
+
 const movesDisplay = document.querySelector("#moves-counter");
 const cardsContainer = document.querySelector(".cards");
+const scoreDisplay = document.querySelector("#score-counter");
+function updateScoreDisplay() {
+    scoreDisplay.textContent = score;
+  }
+
 const cards = document.querySelectorAll(".cards .card");
 // Function to update the moves counter display
 function updateMovesDisplay() {
